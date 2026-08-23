@@ -1,11 +1,16 @@
-function toggleMenu() {
-    document.getElementById("nav").classList.toggle("show");
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("year").textContent = new Date().getFullYear();
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
 
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        document.getElementById("nav").classList.remove("show");
-    });
+    if (menuToggle && navbar) {
+
+        menuToggle.addEventListener("click", function () {
+            navbar.classList.toggle("active");
+        });
+
+    } else {
+        console.log("Menu elements not found!");
+    }
+
 });
