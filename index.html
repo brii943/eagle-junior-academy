@@ -78,9 +78,8 @@
 
         <div class="about-image">
 
-            <imgsrc="images/logo.jpg"
-                alt="Eagle Junior Academy"
-            >
+            <!-- FIXED TYPO: changed imgsrc to img src -->
+            <img src="images/logo.jpg" alt="Eagle Junior Academy">
 
         </div>
 
@@ -245,7 +244,7 @@
 
 
 
-    <!-- ================= SCHOOL LIFE ================= -->
+    <!-- ================= SCHOOL LIFE (CAROUSEL ADDED HERE) ================= -->
 
     <section id="life" class="school-life">
 
@@ -260,30 +259,22 @@
 
         </div>
 
-
-        <div class="life-grid">
-
-
-            <!-- School Photo -->
-
-            <div class="life-card">
-
-                <imgsrc="images/field.jpg"
-                    alt="Eagle Junior Academy learners"
-                >
-
-                <h3>
-                    Our Learners
-                </h3>
-
-                <p>
-                    Building friendships, confidence,
-                    teamwork and unforgettable
-                    school experiences.
-                </p>
-
+        <!-- EMBEDDED CAROUSEL CONTAINER -->
+        <div class="carousel-container">
+            <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            
+            <div class="carousel-slide">
+                <!-- Replace or add your image paths here from your images folder -->
+                <img class="slide-img active" src="images/field.jpg" alt="Eagle Junior Academy field">
+                <img class="slide-img" src="images/face.jpg" alt="Sports and games">
+                <img class="slide-img" src="images/face1.jpg" alt="Classroom learning">
             </div>
 
+            <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+
+        <div class="life-grid">
 
             <!-- Sports -->
 
